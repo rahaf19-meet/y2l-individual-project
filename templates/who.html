@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="/static/logo.png" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>KIZZI KIDS</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="{{url_for('home')}}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>KIZZI KIDS</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</nav>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>KIZZI KIDS</b></h1>
+  </header>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+<!-- Begin
+var display_text  = "Sadly, Denmark is an unlikely place "
++ "to find gray elephants and orange kangaroos!  "
++ "     There are more cool stuff like this "
++ "throughout my site!  Check 'em out!!!!!!!!!!"
+var display_text; var place; var meter;
+var out = " "; var place = 50;
+function scroll_text(){
+for (meter = 0; meter < place; meter++){
+out += " "
+}
+if (place >= 0)
+out += display_text
+else out = display_text.substring(-place,display_text.length)
+document.scroll_form.field.value = out
+out = " "
+place--
+if (place < -(display_text.length)){
+place = 50
+}
+setTimeout('scroll_text()',100)
+}
+// End -->
+</SCRIPT> 
+</head>
+<body>
+
+<CENTER>
+<TT>Please follow the instructions below carefully.
+<P>
+<OL>
+<LI>Think of a number between 1 and 10.</LI>
+<LI>Multiply the number by 9.</LI>
+<LI>Add the digits of your result.</LI>>
+<LI>Subtract 5 from your new number.</LI>>
+<LI>Find the letter that corresponds to your number, if 1 = A, 2 = B, 3 = C, etc.</LI>>
+<LI>Think of a country that begins with your letter.</LI>>
+<LI>Write down the name of that country.</LI>>
+<LI>Think of an animal beginning with the second letter of your country.</LI>>
+<LI>Think of the color of that animal.</LI>>
+<LI>Write down the animal and its color.</LI>>
+<LI>Think of an animal that begins with the last letter of your country.</LI>>
+<LI>Think of a fruit that begins with the last letter of this second animal.</LI>>
+<LI>Write down the fruit and the animal.</LI>>
+</OL>
+</P>
+<p>
+When you are finished, touch analyze...
+<FORM name="scroll_form">
+<input type="button" name="button_one" value="Analyze..." onClick="scroll_text()">
+<input type="text" name="field" size="50">
+</form></FORM>
+</CENTER>
+</p></TT></CENTER></body></html>
