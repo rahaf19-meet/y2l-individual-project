@@ -3,8 +3,8 @@ from databases import *
 
 def send_mail(email):
 	
-	gmail_user = 'rahaf.sabri@gmail.com'  
-	gmail_password = 'Rahaf-Sabri@2002'
+	gmail_user = 'kizzikids@gmail.com'  
+	gmail_password = 'KizziKids@2019'
 
 	password = session.query(User).filter_by(email=email).first()
 	password = password.password

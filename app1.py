@@ -2,7 +2,7 @@ from databases import *
 from flask import Flask, flash, render_template, url_for, redirect, request
 from flask import session as login_session
 # from flask.ext.session import Session
-# from forgotpass import send_mail
+from forgetpass import send_mail
 # Starting the flask app
 
 app = Flask(__name__)
@@ -18,9 +18,9 @@ def home():
         log = "false"
     return render_template('homee.html',log=log)
 
-@app.route('/game', methods=['GET', 'POST'])
-def game():
-	return render_template('game_try.html')
+@app.route('/hangman', methods=['GET', 'POST'])
+def hangman():
+	return render_template('hangman.html')
 
 @app.route('/tictactoe', methods=['GET', 'POST'])
 def tictactoe():
@@ -62,10 +62,9 @@ def signup ():
             user = request.form['user']
             password = request.form['password']
             mail = request.form['mail']
-            loc = request.form['loc']
         except:
             return render_template("signup.html", error="u r bad")
-        add_student(user,password,mail,name,lastName,loc)
+        add_student(user,password,mail,name,lastName)
         return redirect(url_for('home'))
 
 
